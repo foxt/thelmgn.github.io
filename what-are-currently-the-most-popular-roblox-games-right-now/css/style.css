@@ -1,0 +1,27 @@
+body,html, #games > table {
+    background: #222 !important;
+    color: #ddd;
+}
+body,body *,body > * {
+  transition: 0.5s all;
+}
+#loader {
+  left: 50%;
+  transform: translate(-50%,0%);
+  position: fixed;
+  bottom: 1em;
+}
+.game-thumb {
+  height: 2em;
+  float:right;
+}
+tr {
+  font-size: 200% !important;
+}
+.tag {
+  font-size: 50% !important;
+}
+#chart {
+  height: 75vh;
+  width: 100vh;
+}
