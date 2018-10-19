@@ -1,0 +1,41 @@
+.pew {
+  background: #111;
+}
+.ts {
+  background: #211;
+}
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.25s all;
+}
+#container {
+  color: #fff;
+  font-size: 2em;
+  font-family: "Ubuntu Mono", monospace;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+#subDiff {
+  font-size: 200%;
+}
+sub {
+  font-size: 50%;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+.ind {
+  color: #da3;
+}
+.plus {
+  color: #3a3;
+}
+.neg {
+  color: #a33;
+}
