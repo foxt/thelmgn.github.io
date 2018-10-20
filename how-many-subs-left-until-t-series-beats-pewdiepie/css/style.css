@@ -39,3 +39,9 @@ sub {
 .neg {
   color: #a33;
 }
+#tDiff,#pewDiff {
+  display: none;
+}
+#tSub,#pewSub,#subDiff {
+  transition: 0.5s all;
+}
