@@ -30,16 +30,8 @@ function loadScript(href) {
 async function loadClippy() {
 
   
-  document.querySelector("#clippyjs").innerHTML = `<link rel="stylesheet" type="text/css" href="clippy/clippy.css" media="all">`
-  
-  await loadScript("clippy/jquery.js")
-  await loadScript("clippy/clippy.min.js")
-  
-  clippy.load('Clippy', function(agent){
-    // do anything with the loaded agent
-    agent.show();
-    agent.speak("It looks like you're trying to gain extra lives on this website, would you like help with that?")
-  });
+  document.querySelector("#clippyjs").innerHTML = `<video src="clippy/peakaboo.webm" autoplay style="position:fixed;top:0;width:640px;height:480px;left:50vw;margin-left:-320px;"></video>`
+
 }
 (async function() {
   await loadScript("clippy/konami.js")
