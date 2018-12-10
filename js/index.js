@@ -30,7 +30,7 @@ function loadScript(href) {
 async function loadClippy() {
 
   
-  document.querySelector("#clippyjs").innerHTML = `<video src="clippy/peakaboo.webm" autoplay style="position:fixed;top:0;width:640px;height:480px;left:50vw;margin-left:-320px;"></video>`
+  document.querySelector("#clippyjs").innerHTML = `<video src="clippy/peakaboo.webm" playsinline autoplay style="position:fixed;top:0;width:640px;height:480px;left:50vw;margin-left:-320px;"></video>`
 
 }
 (async function() {
