@@ -31,16 +31,25 @@
                 <a href="https://discord.gg/MrDEre3" class="regular sociallink" id="discord"><i class="fab fa-discord fa-fw"></i> DISCORD</a>
                 <a href="https://github.com/thelmgn" class="regular sociallink" id="github"><i class="fab fa-github fa-fw"></i> GITHUB</a>
                 <a href="https://twitch.tv/thelmgn" class="regular sociallink" id="twitch"><i class="fab fa-twitch fa-fw"></i> TWITCH</a>
-                <a href="mailto:webmaster@thelmgn.com" class="regular sociallink" id="mail"><i class="fas fa-envelope-open fa-fw"></i> MAIL</a>
-                <a href="javascript:switchPane(true)" style="display:none" class="regular sociallink" id="devicesBtn"><i class="fas fa-laptop fa-fw"></i> DEVICES</a></div>
+                <a href="javascript:alert(`My email address is leo@${location.host}`)" class="regular sociallink" id="mail"><i class="fas fa-envelope-open fa-fw"></i> MAIL</a>
+                <a href="javascript:switchPane('#sociallinks','#devices')" style="display:none" class="regular sociallink nocolour" id="devicesBtn"><i class="fas fa-laptop fa-fw"></i> DEVICES</a>
+                <a href="javascript:switchPane('#sociallinks','#faq')" style="display:none" class="regular sociallink nocolour" id="faqBtn"><i class="fas fa-info fa-fw"></i> ABOUT ME</a>
+                <a href="https://github.com/thelmgn/thelmgn.github.io" class="regular sociallink nocolour"><i class="fas fa-code fa-fw"></i> THIS SITE ON GITHUB</a></div>
+            </div>
             <div id="devices">
                 <h3 class="device-text mono italic">I name my devices after species of fox. Don't ask why.</h3>
                 <a href="https://uk.pcpartpicker.com/user/theLMGN/saved/YcbLkL" class="regular sociallink device" id="vulpes"><i class="fas fa-desktop fa-fw"></i> Vulpes<br><h3 class="device-text">My custom build - i7-6700k, 16GB RAM, GTX970, macOS High Sierra</h3> </a>
                 <span class="regular sociallink device" id="cana"><i class="fas fa-server fa-fw"></i> Cana<br><h3 class="device-text">Home Server - HP m9000, 8GB RAM, 500GB WD Blue, 4TB WD Red, Windows Server 2016</h3> </span>
-                <span class="regular sociallink device" id="corsac"><i class="fas fa-laptop fa-fw"></i> Corsac<br><h3 class="device-text">Laptop - MacBook Pro 13" early 2015, i5, 8GB, 256GB SSD, macOS Mojave</h3> </span>
-                <span class="regular sociallink device" id="velox"><i class="fas fa-mobile-android fa-fw"></i> Velox<br><h3 class="device-text">Main Phone - iPhone XS Max, 256GB, O2</h3> </span>
+                <span class="regular sociallink device" id="corsac"><i class="fas fa-laptop fa-fw"></i> Corsac<br><h3 class="device-text">Laptop - MacBook Pro 13" Early 2015, i5, 8GB, 256GB SSD, macOS Mojave</h3> </span>
+                <span class="regular sociallink device" id="velox"><i class="fas fa-mobile fa-fw"></i> Velox<br><h3 class="device-text">Main Phone - iPhone XS Max, 256GB, O2</h3> </span>
                 <span class="regular sociallink device" id="switch"><i class="fab fa-nintendo-switch fa-fw"></i> Switch<br><h3 class="device-text">Games Console - Nintendo Switch, 32GB, Neon Joycons, I have ZeldaBOTW, FastRMX, Splatoon2, Mario Oddysey and MK8D. FC: SW-6397-3455-8597</h3> </span>
                 <span class="regular sociallink device" id="xbox"><i class="fab fa-xbox fa-fw"></i> Xbox 360<br><h3 class="device-text">Games Console - Xbox 360, 4GB, White Slim, Rarely ever play on it. Broken front panel. Gamertag: LMGNGaming</h3> </span>
+                <a href="javascript:switchPane('#devices','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+            </div>
+            <div id="faq">
+                <span class="regular sociallink device"><i class="fas fa-user fa-fw"></i> Who are you?<br><h3 class="device-text">I'm a young software developer and video editor from England.</h3> </a>
+                <span class="regular sociallink device"><i class="fas fa-brain fa-fw"></i> How'd you learn?<br><h3 class="device-text">Entirely self tought. YouTube videos, tips from friends, tips around the applications I use.</h3> </span>
+                <a href="https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D" class="regular sociallink device"><i class="fas fa-music fa-fw"></i> What music do you like?<br><h3 class="device-text">See: https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D</h3> </a>
                 <a href="javascript:switchPane(false)" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
             </div>
             <sub id="credits" class="mono">(c) theLMGN 2018, thanks to <a href="https://dnomaid.co.uk">Tom</a> for help and ideas, <a href="https://spriteclad.com">Spriteclad</a> for making the site better on mobile devices.</sub>

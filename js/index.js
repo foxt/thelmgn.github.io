@@ -1,19 +1,20 @@
 
-function switchPane(devices) {
-  if (devices == true) {
-    document.querySelector("#sociallinks").style.maxHeight = "0";
-    setTimeout(function() {
-      document.querySelector("#devices").style.maxHeight = "1000vh";
-    },1000)
-  } else {
-    document.querySelector("#devices").style.maxHeight = "0";
-    setTimeout(function() {
-      document.querySelector("#sociallinks").style.maxHeight = "1000vh";
-    },1000)
-  }
+function switchPane(from,to) {
+  document.querySelector(from).style.maxHeight = "0";
+  setTimeout(function() {
+    document.querySelector(to).style.maxHeight = "1000vh";
+  },750)
+  location.hash = to
 }
 document.querySelector("#sociallinks").style.maxHeight = "1000vh";
+
 document.querySelector("#devicesBtn").style.display = ""
+document.querySelector("#faqButton").style.display = ""
+
+if (document.querySelector(location.hash)) {
+  switchPane("#sociallinks",location.hash)
+}
+
 
 //KONAMI
 
