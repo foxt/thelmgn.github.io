@@ -9,7 +9,7 @@ function switchPane(from,to) {
 document.querySelector("#sociallinks").style.maxHeight = "1000vh";
 
 document.querySelector("#devicesBtn").style.display = ""
-document.querySelector("#faqButton").style.display = ""
+document.querySelector("#faqBtn").style.display = ""
 
 if (document.querySelector(location.hash)) {
   switchPane("#sociallinks",location.hash)
