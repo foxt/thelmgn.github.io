@@ -1,6 +1,4 @@
-#discord,#github,#mail,#twitch,#twitter{
-    padding:.2em;
-}
+
 .faded{
     -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.7),rgba(0,0,0,0));
     pointer-events:none;
@@ -41,12 +39,19 @@ h1{
     transition:.1s all;
     display:block;
     color:#ffffff88;
+    padding:.2em;
 }
 .sociallink:hover {
     color:#ffffff;
 }
 .fab,.fas,a{
     color:#fff;
+}
+#reddit{
+    border-left:.1em solid #FF430080;
+}
+#reddit:hover{
+    border-left:.15em solid #FF4300;
 }
 #twitter{
     border-left:.1em solid #1da1f280;
