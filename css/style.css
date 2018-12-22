@@ -104,12 +104,12 @@ h1{
     font-size:75%;
     opacity:.25;
 }
-#devices,#sociallinks,#faq{
+#devices,#sociallinks,#faq,#status{
     overflow:hidden;
     max-height:1000vh;
     transition:1s all;
 }
-#devices,#faq{
+#devices,#faq,#status{
     max-height:0;
 }
 .device-text{
@@ -123,4 +123,17 @@ h1{
 .device:hover{
     border-left:.15em solid #ff0000;
 }
- 
+
+
+.down{
+    border-left:.1em solid #FF000080;
+}
+.down:hover{
+    border-left:.15em solid #ff0000;
+}
+.up{
+    border-left:.1em solid #00ff0080;
+}
+.up:hover{
+    border-left:.15em solid #00ff00;
+}

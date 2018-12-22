@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>theLMGN v17</title>
+        <title>theLMGN v17.2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="msapplication-TileColor" content="#ff0321">
         <meta name="msapplication-square150x150logo" content="https://thelmgn.com/eee.png">
@@ -35,6 +35,7 @@
                 <a href="javascript:alert(`My email address is leo@${location.host}`)" class="regular sociallink" id="mail"><i class="fas fa-envelope-open fa-fw"></i> MAIL</a>
                 <a href="javascript:switchPane('#sociallinks','#devices')" style="display:none" class="regular sociallink nocolour" id="devicesBtn"><i class="fas fa-laptop fa-fw"></i> DEVICES</a>
                 <a href="javascript:switchPane('#sociallinks','#faq')" style="display:none" class="regular sociallink nocolour" id="faqBtn"><i class="fas fa-info fa-fw"></i> ABOUT ME</a>
+                <a href="javascript:status()" style="display:none" class="regular sociallink nocolour" id="statusBtn"><i class="fas fa-heartbeat fa-fw"></i> STATUS</a>
                 <a href="https://github.com/thelmgn/thelmgn.github.io" class="regular sociallink nocolour"><i class="fas fa-code fa-fw"></i> THIS SITE ON GITHUB</a></div>
             </div>
             <div id="devices">
@@ -54,9 +55,16 @@
                 <a href="https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D" class="regular sociallink device"><i class="fas fa-music fa-fw"></i> What music do you like?<br><h3 class="device-text">See: https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D<br>Click the little #<i class="fa fa-chevron-down"></i> to sort properly, GPM sorts by oldest added first by default </h3> </a>
                 <a href="javascript:switchPane('#faq','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
             </div>
+            <div id="status">
+                <div id="statuscontainer">
+                    <span class="regular sociallink"><i class="fas fa-sync fa-spin fa-fw"></i> LOADING</span>
+                </div>
+                <a href="javascript:switchPane('#status','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+            </div>
             <sub id="credits" class="mono">(c) theLMGN 2018, thanks to <a href="https://dnomaid.co.uk">Tom</a> for help and ideas, <a href="https://spriteclad.com">Spriteclad</a> for making the site better on mobile devices.</sub>
             <div id="clippyjs"></div>
         </div>
+        <script src="js/status.js"></script>
         <script src="js/index.js"></script>
     <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
     <script id="CHRISTMA~1">

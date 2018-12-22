@@ -6,14 +6,30 @@ function switchPane(from,to) {
   },750)
   location.hash = to
 }
+
+
+function status() {
+  switchPane("#sociallinks","#status")
+  if (!gotStatus) {
+    fetchStatus()
+  } 
+}
+
 document.querySelector("#sociallinks").style.maxHeight = "1000vh";
 
+
 document.querySelector("#devicesBtn").style.display = ""
+document.querySelector("#statusBtn").style.display = ""
 document.querySelector("#faqBtn").style.display = ""
 
-if (document.querySelector(location.hash)) {
-  switchPane("#sociallinks",location.hash)
-}
+try {
+  if (document.querySelector(location.hash)) {
+    switchPane("#sociallinks",location.hash)
+    if (location.hash = "#status") {
+      fetchStatus()
+    }
+  }
+} catch(e){}
 
 
 //KONAMI
