@@ -22,7 +22,7 @@ function generate(check) {
     var down = ""
     if (check.down) {
         down = `<br>
-        Down for: <b>${timeToString(check.down_since)}</b>`
+        Down for: <b>${timeToString(check.down_since)}</b><br>Error code: <b>${check.error}</b>`
     }
     return `
     <a class="regular sociallink ${check.down ? "down" : "up"}" href="//updown.io/${check.token}">
