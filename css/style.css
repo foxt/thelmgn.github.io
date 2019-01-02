@@ -28,11 +28,16 @@ h1{
     font-weight:700;
     margin-bottom:0;
 }
-.mono.italic{
+.mono.italic,.a.b.c.d{
     font-weight:300;
-    font-style:italic;
     line-height:.5;
     font-size:125%;
+}
+.italic {
+    font-style:italic;
+}
+.a.b.c.d{
+    font-style: normal;
 }
 .sociallink{
     text-decoration:none;
@@ -136,4 +141,11 @@ h1{
 }
 .up:hover{
     border-left:.15em solid #00ff00;
+}
+
+#statuscontainer {
+    transition: 0.1s all;
+}
+a {
+    text-decoration: none;
 }
