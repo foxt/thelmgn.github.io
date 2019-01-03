@@ -56,6 +56,7 @@ function loadScript(href) {
 var jameski= false
 async function loadClippy() {
   if (jameski == false) {
+    document.body.style.overflow = 'hidden'
     document.querySelector("#jameskii").style.display = "block"
     await document.querySelector("audio").play()
     jameski = true
