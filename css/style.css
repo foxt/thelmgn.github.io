@@ -115,12 +115,12 @@ h1{
     font-size:75%;
     opacity:.25;
 }
-#devices,#sociallinks,#faq,#status{
+#devices,#sociallinks,#faq,#status,#projects{
     overflow:hidden;
     max-height:1000vh;
     transition:1s all;
 }
-#devices,#faq,#status{
+#devices,#faq,#status,#projects{
     max-height:0;
 }
 .device-text{

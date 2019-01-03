@@ -15,6 +15,12 @@ function status() {
   } 
 }
 
+function projects() {
+  switchPane("#sociallinks","#projects")
+  if (!gotProjects) {
+    fetchProjects()
+  } 
+}
 document.querySelector("#sociallinks").style.maxHeight = "1000vh";
 
 
@@ -27,6 +33,9 @@ try {
     switchPane("#sociallinks",location.hash)
     if (location.hash = "#status") {
       fetchStatus()
+    }
+    if (location.hash = "#projects") {
+      fetchProjects()
     }
   }
 } catch(e){}
