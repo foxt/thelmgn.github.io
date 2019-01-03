@@ -36,7 +36,7 @@ h1{
 }
 .mono.italic,.a.b.c.d{
     font-weight:300;
-    line-height:.5;
+
     font-size:125%;
 }
 .italic {

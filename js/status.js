@@ -3,22 +3,22 @@ function timeToString(time) {
     if (diff < 0) {diff = -diff}
     var date = new Date(diff)
     if (date.getTime() > 31536000000) {
-        return (date.getUTCFullYear()-1970).toString() + " years"
+        return (date.getUTCFullYear()-1970).toString() + " yr"
     }
     if (date.getTime() > 2629800000) {
-        return date.getUTCMonth().toString() + " months"
+        return date.getUTCMonth().toString() + " mo"
     }
     if (date.getTime() > 86400000) {
-        return date.getUTCDate().toString() + " days"
+        return date.getUTCDate().toString() + " day"
     }
     if (date.getTime() > 3600000) {
-        return date.getUTCHours().toString() + " hours"
+        return date.getUTCHours().toString() + " hr"
     }
     if (date.getTime() > 60000) {
-        return date.getUTCMinutes().toString() + " minutes"
+        return date.getUTCMinutes().toString() + " min"
     }
     if (date.getTime() > 1000) {
-        return date.getUTCSeconds().toString() + " seconds"
+        return date.getUTCSeconds().toString() + " sec"
     }
     return date.getTime().toString() + " ms"    
 }
