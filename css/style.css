@@ -15,13 +15,19 @@ body{
 }
 .mono{
     color:#fff;
-    font-family:"Ubuntu Mono",sans-serif;
+    font-family:"Ubuntu Mono",monospace;
     font-size:150%;
 }
+
 .regular{
     color:#fff;
     font-family:Ubuntu,sans-serif;
     font-size:250%;
+}
+.gsans {
+    color: #fff;
+    font-family: "ProductSansBold",sans-serif;
+    font-size: 150%;
 }
 h1{
     font-size:400%!important;
