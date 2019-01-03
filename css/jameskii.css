@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Staatliches);
+#jameskii {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+  }
+  #jameskiitop {
+    top: -1.1em;
+    transition: 0.5s all;
+    width: 100vw;
+    font-size: 500%;
+    font-family: "Comfortaa",sans-serif;
+    text-align: center;
+    position: fixed;
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+  }
+  #jameskiibottom {
+    bottom: -1.1em;
+    transition: 0.5s all;
+    width: 100vw;
+    font-size: 500%;
+    font-family: "Staatliches",sans-serif;
+    text-align: center;
+    position: fixed;
+    -webkit-text-stroke: 2px #000;
+    color: #fff;
+  }
+  #container {
+
+
+    transition: 0.5s all;
+  }

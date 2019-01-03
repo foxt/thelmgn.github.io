@@ -50,15 +50,24 @@ function loadScript(href) {
     var script = document.createElement('script');
     script.src = href;
     script.onload = a
-    document.querySelector("#clippyjs").appendChild(script);
+    document.body.appendChild(script);
   })
 }
-
+var jameski= false
 async function loadClippy() {
-
-  
-  document.querySelector("#clippyjs").innerHTML = `<video src="clippy/peakaboo.webm" playsinline autoplay style="position:fixed;top:0;width:640px;height:480px;left:50vw;margin-left:-320px;"></video>`
-
+  if (jameski == false) {
+    document.querySelector("#jameskii").style.display = "block"
+    await document.querySelector("audio").play()
+    jameski = true
+    document.querySelector("audio").currentTime = 20.4
+    document.querySelector("#jameskiitop").style.top = "0"
+    document.querySelector("#jameskiibottom").style.bottom = "0"
+    document.querySelector("#container").style.transform = "scale(2) rotate(20deg)"
+    setTimeout(function() {
+      document.querySelector("#container").style.transition = "240s transform"
+      document.querySelector("#container").style.transform = "scale(10) rotate(90deg)"
+    },500)
+  }
 }
 (async function() {
   await loadScript("clippy/konami.js")
