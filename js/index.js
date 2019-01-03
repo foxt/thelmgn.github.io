@@ -1,4 +1,3 @@
-document.body.style.overflow = 'hidden'
 function switchPane(from,to) {
   document.querySelector(from).style.maxHeight = "0";
   setTimeout(function() {
