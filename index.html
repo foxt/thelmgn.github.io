@@ -1,86 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>theLMGN v17.2</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="msapplication-TileColor" content="#ff0321">
-        <meta name="msapplication-square150x150logo" content="https://thelmgn.com/eee.png">
-        <link rel="apple-touch-icon" href="https://thelmgn.com/eee.png">
-        <link rel="icon" href="https://thelmgn.com/eee.png" type="image/png" sizes="16x16">
-        <meta property="og:image" content="https://thelmgn.com/eee.png">
-        <link rel="canonical" href="https://thelmgn.com/">
-        <meta property="og:url" content="http://thelmgn.com/">
-        <meta property="og:site_name" content="theLMGN">
-        <script type="application/ld+json">
-            {"name":"theLMGN","description":"lazy programmer","@type":"WebSite","url":"http://thelmgn.com/","headline":"theLMGN","@context":"http://schema.org"}
-        </script>
-        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:300i,400,700|Ubuntu:700'>
-        <link rel='stylesheet prefetch' href='fonts/all.css'>
-        <meta name="google-site-verification" content="mr4m8GC65lxrgiFGzrsc9tVfydNvSX73One2-01BBFw" />
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <title>theLMGN v17.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ff0321">
+    <meta name="msapplication-square150x150logo" content="https://thelmgn.com/eee.png">
+    <link rel="apple-touch-icon" href="https://thelmgn.com/eee.png">
+    <link rel="icon" href="https://thelmgn.com/eee.png" type="image/png" sizes="16x16">
+    <meta property="og:image" content="https://thelmgn.com/eee.png">
+    <link rel="canonical" href="https://thelmgn.com/">
+    <meta property="og:url" content="http://thelmgn.com/">
+    <meta property="og:site_name" content="theLMGN">
+    <script type="application/ld+json">
+        {"name":"theLMGN","description":"lazy programmer","@type":"WebSite","url":"http://thelmgn.com/","headline":"theLMGN","@context":"http://schema.org"}
+    </script>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:300i,400,700|Ubuntu:700'>
+    <link rel='stylesheet prefetch' href='fonts/all.css'>
+    <meta name="google-site-verification" content="mr4m8GC65lxrgiFGzrsc9tVfydNvSX73One2-01BBFw" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <img height="75vh" class="faded" src="eee.png" id="mainBg"></img>
-        <div id="content">
-            <h1 class="gsans">theLMGN</h1>
-            <h3 class="mono italic">"lazy programmer"</h3>
-            <div id="sociallinks">
-                <a href="https://reddit.com/u/lmgn" class="regular sociallink" id="reddit"><i class="fab fa-reddit-alien fa-fw"></i> REDDIT</a>
-                <a href="https://twitter.com/thelmgn" class="regular sociallink" id="twitter"><i class="fab fa-twitter fa-fw"></i> TWITTER</a>
-                <a href="https://discord.gg/JRtzX6g" class="regular sociallink" id="discord"><i class="fab fa-discord fa-fw"></i> DISCORD</a>
-                <a href="https://github.com/thelmgn" class="regular sociallink" id="github"><i class="fab fa-github fa-fw"></i> GITHUB</a>
-                <a href="https://twitch.tv/thelmgn" class="regular sociallink" id="twitch"><i class="fab fa-twitch fa-fw"></i> TWITCH</a>
-                <a href="javascript:alert(`My email address is leo@${location.host}`)" class="regular sociallink" id="mail"><i class="fas fa-envelope-open fa-fw"></i> MAIL</a>
-                <a href="javascript:switchPane('#sociallinks','#devices')" style="display:none" class="regular sociallink nocolour" id="devicesBtn"><i class="fas fa-laptop fa-fw"></i> DEVICES</a>
-                <a href="javascript:switchPane('#sociallinks','#faq')" style="display:none" class="regular sociallink nocolour" id="faqBtn"><i class="fas fa-info fa-fw"></i> ABOUT ME</a>
-                <a href="javascript:status()" style="display:none" class="regular sociallink nocolour" id="statusBtn"><i class="fas fa-heartbeat fa-fw"></i> STATUS</a>
-                <a href="https://github.com/thelmgn/thelmgn.github.io" class="regular sociallink nocolour"><i class="fas fa-code fa-fw"></i> THIS SITE ON GITHUB</a></div>
-            </div>
-            <div id="devices">
-                <h3 class="device-text mono italic">I name my devices after species of fox. Don't ask why.</h3>
-                <a href="https://uk.pcpartpicker.com/user/theLMGN/saved/YcbLkL" class="regular sociallink device" id="vulpes"><i class="fas fa-desktop fa-fw"></i> Vulpes<br><h3 class="device-text">My custom build - i7-6700k, 16GB RAM, GTX970, macOS High Sierra</h3> </a>
-                <a href="https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.7-13-early-2015-retina-display-specs.html" class="regular sociallink device" id="corsac"><i class="fas fa-laptop fa-fw"></i> Corsac<br><h3 class="device-text">Laptop - MacBook Pro 13" Early 2015, i5, 8GB, 256GB SSD, macOS Mojave</h3> </a>
-                <span class="regular sociallink device" id="velox"><i class="fas fa-mobile fa-fw"></i> Velox<br><h3 class="device-text">Phone - iPhone XS Max, 256GB, O2</h3> </span>
-                <span class="regular sociallink device" id="pallida"><i class="fas fa-tablet fa-fw"></i> Pallida<br><h3 class="device-text">Tablet - iPad Air 2, 32GB</h3> </span>
-                <span class="regular sociallink device" id="cana"><i class="fas fa-server fa-fw"></i> Cana<br><h3 class="device-text">Home Server - HP m9000, 8GB RAM, 500GB WD Blue, 4TB WD Red, Windows Server 2016</h3> </span>
-                <span class="regular sociallink device" id="switch"><i class="fab fa-nintendo-switch fa-fw"></i> Switch<br><h3 class="device-text">Games Console - Nintendo Switch, 32GB, Neon Joycons, I have ZeldaBOTW, FastRMX, Splatoon2, Mario Oddysey and MK8D. FC: SW-6397-3455-8597</h3> </span>
-                <span class="regular sociallink device" id="otherDevices">Other<br><h3 class="device-text">
-                    <i class="fab fa-xbox"></i>Xbox 360<br>
-                    <i class="fab fa-raspberry-pi"></i>Raspberry Pi 3 - Hosts various bits and bobs on the subdomains.<br>
-                    <i class="fas fa-watch"></i>Pebble Time Red - Old watch<br>
-                    <i class="fas fa-watch"></i>Apple Watch Series 4 - Watch
-                </h3> </span>
-                <a href="javascript:switchPane('#devices','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
-            </div>
-            <div id="faq">
-                <span class="regular sociallink device"><i class="fas fa-user fa-fw"></i> Who are you?<br><h3 class="device-text">I'm a young software developer and video editor from England.</h3> </a> </span>
-                <span class="regular sociallink device"><i class="fas fa-brain fa-fw"></i> How'd you learn?<br><h3 class="device-text">Entirely self tought. YouTube videos, tips from friends, tips around the applications I use.</h3> </span>
-                <span  class="regular sociallink device"><i class="fas fa-code fa-fw"></i> What programming languages do you know?<br><h3 class="device-text">In order of learnt: VB.net, Python, Lua, HTML + CSS + JS, C#</h3> </span>
-                <a href="https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D" class="regular sociallink device"><i class="fas fa-music fa-fw"></i> What music do you like?<br><h3 class="device-text">See: https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D<br>Click the little #<i class="fa fa-chevron-down"></i> to sort properly, GPM sorts by oldest added first by default </h3> </a>
-                <a href="javascript:switchPane('#faq','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
-            </div>
-            <div id="status">
-                <div id="statuscontainer">
-                    <span class="regular sociallink"><i class="fas fa-sync fa-spin fa-fw"></i> LOADING</span>
-                </div>
-                <a href="javascript:switchPane('#status','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
-            </div>
-            <div id="projects">
-                <h3 class="device-text mono italic">This shows the 10 (CodePen limitation) most recent <a href="https://codepen.io/thelmgn">CodePen</a> pens and all public GitHub repos published to my <a href="https://github.com">user</a> (excludes repos on organizations/other accounts), sorted by last update</h3>
-                <div id="projectsContainer">
-                    <span class="regular sociallink"><i class="fas fa-sync fa-spin fa-fw"></i> LOADING</span>
-                </div>
-                <a href="javascript:switchPane('#projects','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
-            </div>
-            
-            <sub id="credits" class="mono">(c) theLMGN 2018, thanks to <a href="https://dnomaid.co.uk">Tom</a> for help and ideas, <a href="https://spriteclad.com">Spriteclad</a> for making the site better on mobile devices.</sub>
-            <div id="clippyjs"></div>
+<body>
+    <img height="75vh" class="faded" src="eee.png" id="mainBg"></img>
+    <div id="content">
+        <h1 class="gsans">theLMGN</h1>
+        <h3 class="mono italic">"lazy programmer"</h3>
+        <div id="sociallinks">
+            <a href="https://reddit.com/u/lmgn" class="regular sociallink" id="reddit"><i class="fab fa-reddit-alien fa-fw"></i> REDDIT</a>
+            <a href="https://twitter.com/thelmgn" class="regular sociallink" id="twitter"><i class="fab fa-twitter fa-fw"></i> TWITTER</a>
+            <a href="https://discord.gg/JRtzX6g" class="regular sociallink" id="discord"><i class="fab fa-discord fa-fw"></i> DISCORD</a>
+            <a href="https://github.com/thelmgn" class="regular sociallink" id="github"><i class="fab fa-github fa-fw"></i> GITHUB</a>
+            <a href="https://twitch.tv/thelmgn" class="regular sociallink" id="twitch"><i class="fab fa-twitch fa-fw"></i> TWITCH</a>
+            <a href="javascript:alert(`My email address is leo@${location.host}`)" class="regular sociallink" id="mail"><i class="fas fa-envelope-open fa-fw"></i> MAIL</a>
+            <a href="javascript:switchPane('#sociallinks','#devices')" style="display:none" class="regular sociallink nocolour" id="devicesBtn"><i class="fas fa-laptop fa-fw"></i> DEVICES</a>
+            <a href="javascript:switchPane('#sociallinks','#faq')" style="display:none" class="regular sociallink nocolour" id="faqBtn"><i class="fas fa-info fa-fw"></i> ABOUT ME</a>
+            <a href="javascript:status()" style="display:none" class="regular sociallink nocolour" id="statusBtn"><i class="fas fa-heartbeat fa-fw"></i> STATUS</a>
+            <a href="javascript:projects()" style="display:none" class="regular sociallink nocolour" id="projectsBtn"><i class="fas fa-code fa-fw"></i> PROJECTS</a>
         </div>
-        <script src="js/status.js"></script>
-        <script src="js/projects.js"></script>
-        <script src="js/index.js"></script>
+    </div>
+    <div id="devices">
+        <h3 class="device-text mono italic">I name my devices after species of fox. Don't ask why.</h3>
+        <a href="https://uk.pcpartpicker.com/user/theLMGN/saved/YcbLkL" class="regular sociallink device" id="vulpes"><i class="fas fa-desktop fa-fw"></i> Vulpes<br><h3 class="device-text">My custom build - i7-6700k, 16GB RAM, GTX970, macOS High Sierra</h3> </a>
+        <a href="https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.7-13-early-2015-retina-display-specs.html" class="regular sociallink device" id="corsac"><i class="fas fa-laptop fa-fw"></i> Corsac<br><h3 class="device-text">Laptop - MacBook Pro 13" Early 2015, i5, 8GB, 256GB SSD, macOS Mojave</h3> </a>
+        <span class="regular sociallink device" id="velox"><i class="fas fa-mobile fa-fw"></i> Velox<br><h3 class="device-text">Phone - iPhone XS Max, 256GB, O2</h3> </span>
+        <span class="regular sociallink device" id="pallida"><i class="fas fa-tablet fa-fw"></i> Pallida<br><h3 class="device-text">Tablet - iPad Air 2, 32GB</h3> </span>
+        <span class="regular sociallink device" id="cana"><i class="fas fa-server fa-fw"></i> Cana<br><h3 class="device-text">Home Server - HP m9000, 8GB RAM, 500GB WD Blue, 4TB WD Red, Windows Server 2016</h3> </span>
+        <span class="regular sociallink device" id="switch"><i class="fab fa-nintendo-switch fa-fw"></i> Switch<br><h3 class="device-text">Games Console - Nintendo Switch, 32GB, Neon Joycons, I have ZeldaBOTW, FastRMX, Splatoon2, Mario Oddysey and MK8D. FC: SW-6397-3455-8597</h3> </span>
+        <span class="regular sociallink device" id="otherDevices">Other<br><h3 class="device-text">
+            <i class="fab fa-xbox"></i>Xbox 360<br>
+            <i class="fab fa-raspberry-pi"></i>Raspberry Pi 3 - Hosts various bits and bobs on the subdomains.<br>
+            <i class="fas fa-watch"></i>Pebble Time Red - Old watch<br>
+            <i class="fas fa-watch"></i>Apple Watch Series 4 - Watch
+        </h3> </span>
+        <a href="javascript:switchPane('#devices','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+    </div>
+    <div id="faq">
+        <span class="regular sociallink device"><i class="fas fa-user fa-fw"></i> Who are you?<br><h3 class="device-text">I'm a young software developer and video editor from England.</h3> </a> </span>
+        <span class="regular sociallink device"><i class="fas fa-brain fa-fw"></i> How'd you learn?<br><h3 class="device-text">Entirely self tought. YouTube videos, tips from friends, tips around the applications I use.</h3> </span>
+        <span  class="regular sociallink device"><i class="fas fa-code fa-fw"></i> What programming languages do you know?<br><h3 class="device-text">In order of learnt: VB.net, Python, Lua, HTML + CSS + JS, C#</h3> </span>
+        <a href="https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D" class="regular sociallink device"><i class="fas fa-music fa-fw"></i> What music do you like?<br><h3 class="device-text">See: https://play.google.com/music/playlist/AMaBXylUUcgh_Crep9fBpgePl33gWPtWbLEPPI7me6uF4CCK0pSOIeP_tSApz58GxrsHklMOT2U6xD44_1Ks_Hcocmla7yUv3Q%3D%3D<br>Click the little #<i class="fa fa-chevron-down"></i> to sort properly, GPM sorts by oldest added first by default </h3> </a>
+        <a href="javascript:switchPane('#faq','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+    </div>
+    <div id="status">
+        <div id="statuscontainer">
+            <span class="regular sociallink"><i class="fas fa-sync fa-spin fa-fw"></i> LOADING</span>
+        </div>
+        <a href="javascript:switchPane('#status','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+    </div>
+    <div id="projects">
+        <h3 class="device-text mono italic">This shows the 10 (CodePen limitation) most recent <a href="https://codepen.io/thelmgn">CodePen</a> pens and all public GitHub repos published to my <a href="https://github.com">user</a> (excludes repos on organizations/other accounts), sorted by last update</h3>
+        <div id="projectsContainer">
+            <span class="regular sociallink"><i class="fas fa-sync fa-spin fa-fw"></i> LOADING</span>
+        </div>
+        <a href="javascript:switchPane('#projects','#sociallinks')" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+    </div>
+    
+    <sub id="credits" class="mono">(c) theLMGN 2018, thanks to <a href="https://dnomaid.co.uk">Tom</a> for help and ideas, <a href="https://spriteclad.com">Spriteclad</a> for making the site better on mobile devices.</sub>
+    <div id="clippyjs"></div>
+</div>
+<script src="js/status.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/index.js"></script>
 
-    </body>
+</body>
 </html>
