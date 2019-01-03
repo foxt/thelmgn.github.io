@@ -1,22 +1,28 @@
 function timeToString(time) {
-    var diff = new Date() - new Date(time)
+    var diff = new Date().getTime() - new Date(time).getTime()
     if (diff < 0) {diff = -diff}
     var date = new Date(diff)
+    if (date.getTime() > 31536000000) {
+        return (date.getUTCFullYear()-1970).toString() + " years"
+    }
+    if (date.getTime() > 2629800000) {
+        return date.getUTCMonth().toString() + " months"
+    }
     if (date.getTime() > 86400000) {
-        return date.getDay().toString() + " days"
+        return date.getUTCDate().toString() + " days"
     }
     if (date.getTime() > 3600000) {
-        return date.getHours().toString() + " hours"
+        return date.getUTCHours().toString() + " hours"
     }
     if (date.getTime() > 60000) {
-        return date.getMinutes().toString() + " minutes"
+        return date.getUTCMinutes().toString() + " minutes"
     }
     if (date.getTime() > 1000) {
-        return date.getSeconds().toString() + " seconds"
+        return date.getUTCSeconds().toString() + " seconds"
     }
-    return date.getTime().toString() + " ms"
-    
+    return date.getTime().toString() + " ms"    
 }
+
 var cbTime = -1
 setInterval(function() {
     cbTime = cbTime - 1
