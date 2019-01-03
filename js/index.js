@@ -1,4 +1,3 @@
-
 function switchPane(from,to) {
   document.querySelector(from).style.maxHeight = "0";
   setTimeout(function() {
@@ -56,10 +55,10 @@ function loadScript(href) {
 var jameski= false
 async function loadClippy() {
   if (jameski == false) {
-    document.body.style.overflow = 'hidden'
     document.querySelector("#jameskii").style.display = "block"
     await document.querySelector("audio").play()
     jameski = true
+    document.body.style.overflow = 'hidden'
     document.querySelector("audio").currentTime = 20.4
     document.querySelector("#jameskiitop").style.top = "0"
     document.querySelector("#jameskiibottom").style.bottom = "0"
