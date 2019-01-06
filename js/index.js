@@ -58,6 +58,7 @@ async function loadClippy() {
     document.querySelector("#jameskii").style.display = "block"
     await document.querySelector("audio").play()
     jameski = true
+    document.body.style.pointerEvents = "none"
     document.body.style.overflow = 'hidden'
     document.querySelector("audio").currentTime = 20.4
     document.querySelector("#jameskiitop").style.top = "0"
