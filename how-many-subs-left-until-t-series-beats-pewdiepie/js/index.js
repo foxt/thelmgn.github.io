@@ -120,11 +120,10 @@ function checkChannel(channel,callback) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      const json = JSON.parse(this.responseText)
-      callback(json.items[0].statistics.subscriberCount)
+      callback(this.responseText)
     }
   };
-  xhttp.open("GET", `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channel}&key=AIzaSyCio_-QJ74DEF5Wp1ZGvVKw7eaKQxuUqiQ`, true);
+  xhttp.open("GET", `https://bastet.socialblade.com/youtube/lookup?query=${channel}`, true);
   xhttp.send();
 }
 function checkPew() {
