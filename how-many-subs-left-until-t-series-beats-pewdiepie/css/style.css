@@ -63,3 +63,6 @@ footer:hover {
 a {
   color: #fff;
 }
+#pew,#ts {
+  transition: 0.1s all;
+}
