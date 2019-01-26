@@ -227,7 +227,9 @@ function render() {
 
 function switchPew() {
   strings = pvts
+  checkSub()
 }
 function switchWillNE() {
   strings = sub2willne
+  checkSub()
 }
