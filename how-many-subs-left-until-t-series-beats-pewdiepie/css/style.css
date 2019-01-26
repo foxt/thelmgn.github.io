@@ -44,3 +44,22 @@ sub {
 #tSub,#pewSub,#subDiff {
   transition: 0.5s all;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  opacity: 0.5;
+  color: #fff;
+  transition: 0.25s all;
+  -webkit-user-select: none;
+  user-select: none;
+}
+footer:hover {
+  opacity: 1;
+}
+
+a {
+  color: #fff;
+}

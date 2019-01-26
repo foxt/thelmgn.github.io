@@ -90,8 +90,30 @@ function numberWithCommas(x) {
 
 
 
-
-
+const pvts = {
+  pew: {
+    name: "Felix",
+    account: "UC-lHJZR3Gqxm24_Vd_AJ5Yw"
+  },
+  ts: {
+    name: "T-Series",
+    account: "UCq-Fj5jknLsUf-MWSy4_brA"
+  }
+}
+const sub2willne = {
+  pew: {
+    name: "WillNE",
+    account: "UCaFUrR3oSxOl5Y9y6tvLTEg"
+  },
+  ts: {
+    name: "Morgz' Mum",
+    account: "UCqsUQhA6UIwSams54bEnCJw"
+  }
+}
+var strings =  pvts
+if (location.hash == "#willne") {
+  strings = sub2willne
+}
 
 var pewSub = 0
 var oldPew = 0
@@ -117,24 +139,26 @@ delta -= minutes * 60;
 }
     
 function checkChannel(channel,callback) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      callback(this.responseText)
-    }
-  };
-  xhttp.open("GET", `https://bastet.socialblade.com/youtube/lookup?query=${channel}`, true);
-  xhttp.send();
+  try {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        callback(this.responseText)
+      }
+    };
+    xhttp.open("GET", `https://youtubeapis--thelmgn.repl.co/${channel}`, true);
+    xhttp.send();
+  } catch(e) {}
 }
 function checkPew() {
-  checkChannel("UC-lHJZR3Gqxm24_Vd_AJ5Yw",function(subs) {
+  checkChannel(strings.pew.account,function(subs) {
    pewSub = subs
     gotPew = true
     setTimeout(checkPew,5000)
  })
 }
 function checkT() {
-  checkChannel("UCq-Fj5jknLsUf-MWSy4_brA",function(subs) {
+  checkChannel(strings.ts.account,function(subs) {
     tSub = subs
     gotT = true
     setTimeout(checkT,5000)
@@ -156,8 +180,9 @@ setInterval(function() {
 
 
 var oldDiff = 0;
-
 function render() {
+  document.querySelector("#pew").innerText = strings.pew.name
+  document.querySelector("#ts").innerText = strings.ts.name
   $("#pewSub").numerator({duration: "4900", rounding: "0", toValue: pewSub, easing: "linear"})
   $("#tSub").numerator({duration: "4900", rounding: "0", toValue: tSub, easing: "linear"})
   if (oldT < tSub) {
@@ -179,11 +204,11 @@ function render() {
   var diff = 0
   if (tSub > pewSub) {
     document.querySelector("#bg").className = "ts"
-    document.querySelector("#winner").innerText = "T-Series"
+    document.querySelector("#winner").innerText = strings.ts.name
     diff = tSub - pewSub
   } else {
     document.querySelector("#bg").className = "pew"
-    document.querySelector("#winner").innerText = "Felix"
+    document.querySelector("#winner").innerText = strings.pew.name
     diff = pewSub - tSub
     
   }
@@ -198,4 +223,11 @@ function render() {
        document.querySelector("#subDiff").className = ""
     }
     oldDiff = diff
+}
+
+function switchPew() {
+  strings = pvts
+}
+function switchWillNE() {
+  strings = sub2willne
 }
