@@ -77,13 +77,17 @@ function numberWithCommas(x) {
   };
   
   $.fn[ pluginName ] = function ( options ) {
-    return this.each(function() {
-      if ( $.data( this, "plugin_" + pluginName ) ) {
-        $.data(this, 'plugin_' + pluginName, null);
-      }
-      $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
-      
-    });
+    if (!document.querySelector("#animations").checked) {
+      this[0].innerText = options.toValue
+    } else {
+      return this.each(function() {
+        if ( $.data( this, "plugin_" + pluginName ) ) {
+          $.data(this, 'plugin_' + pluginName, null);
+        }
+        $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+        
+      });
+    }
   };
   
 })( jQuery, window, document );
