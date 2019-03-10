@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-GB" style="font-size: 100%" data-react-helmet="lang,style">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="discord.css">
+    <link rel="icon" href="https://discordapp.com/assets/07dca80a102d4149e9736d4b162cff6f.ico">
+    <title>Download Discord</title>
+    <script>
+      function switchTo(window,title) {
+        document.querySelector("#title").innerText = `Download ${title}`
+        document.querySelector("#osSelector").style.display = "none"
+        document.querySelector(`#${window}`).style.display = "block"
+      }
+      function switchFrom(window) {
+        document.querySelector("#title").innerText = `Download Discord`
+        document.querySelector("#osSelector").style.display = "block"
+        document.querySelector(`#${window}`).style.display = "none"
+      }
+      function autoDetect(implicit) {
+          if (navigator.platform == "MacIntel") {
+              switchTo("mac","for macOS Yosemite+ (autodetect)")
+          } else if (navigator.platform == "Win32") {
+              switchTo("windows","for Windows 7+ (autodetect)")
+          } else if (navigator.platform.includes("Linux i686") || navigator.platform.includes("Linux x86_64")) {
+              switchTo("linux","deb package for Linux (autodetect)")
+          } else {
+              if (implicit) {
+                  alert("Unable to find a version for " + navigator.platform)
+                  document.querySelector("#autodetect").classList.add("disabled")
+              }
+          }
+      }
+      
+    </script>
+
+    <body>
+        <div id="app-mount" class="appMount-3VJmYg">
+            <div class="app-19_DXt platform-web" style="background: #206CA6;">
+                <div class="splashBackground-1FRCko wrapper-3Q5DdO scrollbarGhost-2F9Zj2 scrollbar-3dvm_9" style="background: url('discordLow.jpg'); background-size:cover;">
+                    <div class="rightSplit-2US0xy" style="width: 100%; height: 100%; background-image:url(discord.jpg);background-size: cover;"></div>
+                    <div class="leftSplit-1qOwnR hasLogo-2bq2VW">
+                        
+                        <div class="wrapper-6URcxg" style="opacity: 1; transform: scale(1) translateY(0px) translateZ(0px);">
+                            <form class="authBox-hW6HRx theme-dark">
+                                <div class="centeringWrapper-2Rs1dR">
+                                    <div class="title-jXR8lp marginBottom8-AtZOdT white-2qwKC7 weightLight-3heiur" id="title">Download Discord</div>
+                                    <div class="subTitle-3TUjmF weightNormal-WI4TcG">You can download any version of Discord for all the OSes Discord supports! (this is not endorsed by/affiliated with Discord)</div>
+                                    
+                                    <div class="block-egJnc0 marginTop20-3TxNs6" id="osSelector">
+                                        <a href="javascript:switchTo(`windows`,`for Windows 7+`)" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Windows</div></a>
+                                        <a href="javascript:switchTo(`mac`, `for macOS Yosemite+`)" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">macOS</div></a>
+                                        <a href="javascript:switchTo(`linux`, `.deb package for Linux`)" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Linux</div></a>
+                                        <a href="javascript:autoDetect()" id="autodetect" type="submit" class="black marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Auto-detect</div></a>
+                                    </div>
+                                    <div class="block-egJnc0 marginTop20-3TxNs6" id="windows" style="display:none;">
+                                        <a href="https://discordapp.com/api/download?platform=win" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Stable</div></a>
+                                        <a href="https://discordapp.com/api/download/ptb?platform=win" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">PTB</div></a>
+                                        <a href="https://discordapp.com/api/download/canary?platform=win" type="submit" class="canary marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Canary</div></a>
+                                        <a href="javascript:switchFrom(`windows`)" type="submit" class="black marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Back</div></a>
+                                    </div>
+                                    <div class="block-egJnc0 marginTop20-3TxNs6" id="mac" style="display:none;">
+                                        <a href="https://discordapp.com/api/download?platform=osx" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Stable</div></a>
+                                        <a href="https://discordapp.com/api/download/ptb?platform=osx" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">PTB</div></a>
+                                        <a href="https://discordapp.com/api/download/canary?platform=osx" type="submit" class="canary marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Canary</div></a>
+                                        <a href="javascript:switchFrom(`mac`)" type="submit" class="black marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Back</div></a>
+                                    </div>
+                                    <div class="block-egJnc0 marginTop20-3TxNs6" id="linux" style="display:none;">
+                                        <a href="https://discordapp.com/api/download?platform=linux" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Stable</div></a>
+                                        <a href="https://discordapp.com/api/download/ptb?platform=linux" type="submit" class="marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">PTB</div></a>
+                                        <a href="https://discordapp.com/api/download/canary?platform=linux" type="submit" class="canary marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Canary</div></a>
+                                        <a href="javascript:switchFrom(`linux`)" type="submit" class="black marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN"><div class="contents-18-Yxp">Back</div></a>
+                                    </div>
+                                    
+                                    <a type="submit" class="thelmgn marginBottom8-AtZOdT button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN" href="https://thelmgn.com"><div class="contents-18-Yxp">Developed by theLMGN</div></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tooltips"></div>
+            <div class="theme-dark popouts-3dRSmE"></div>
+            <div class="theme-dark"></div>
+        </div>
+        <style>
+          .canary {
+            background: #F5AE3D !important;
+          }
+          .thelmgn {
+            background: #f43d3d !important;
+          }
+          .black {
+              background: #484c54 !important;
+          }
+
+          .disabled {
+              opacity: 0.5;
+              pointer-events: none;
+          }
+        </style>
+        <script>autoDetect()</script>
+    </body>
+
+</html>
