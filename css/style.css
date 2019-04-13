@@ -114,14 +114,19 @@ h1{
 #credits{
     font-size:75%;
     opacity:.25;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: right;
 }
 #devices,#sociallinks,#faq,#status,#projects{
     overflow:hidden;
-    max-height:1000vh;
+    transform: translate(0%,0);
     transition:1s all;
 }
 #devices,#faq,#status,#projects{
-    max-height:0;
+    transform: translate(-100%,0);
+    display: none;
 }
 .device-text{
     font-size:50%;
