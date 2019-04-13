@@ -2,25 +2,7 @@
 var gotProjects = false
 
 //stolen from jQuery
-function parseXml(data) {
-    var xml;
-    if ( !data || typeof data !== "string" ) {
-        return null;
-    }
-
-    // Support: IE 9 - 11 only
-    // IE throws on parseFromString with invalid input.
-    try {
-        xml = ( new window.DOMParser() ).parseFromString( data, "text/xml" );
-    } catch ( e ) {
-        xml = undefined;
-    }
-
-    if ( !xml || xml.getElementsByTagName( "parsererror" ).length ) {
-        throw new Error( "Invalid XML: " + data );
-    }
-    return xml;
-}
+function parseXml(data){var xml;if(!data||typeof data!=="string"){return null}try{xml=(new window.DOMParser()).parseFromString(data,"text/xml")}catch(e){xml=undefined}if(!xml||xml.getElementsByTagName("parsererror").length){throw new Error("Invalid XML: "+data)}return xml}
 
 function renderProject(project) {
     return `
@@ -81,3 +63,5 @@ async function fetchProjects() {
         setTimeout(fetchProjects,5000)
     }
 }
+
+fetchProjects()

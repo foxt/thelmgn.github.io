@@ -125,10 +125,6 @@ h1{
     transform: translate(0%,0);
     transition:1s all;
 }
-#devices,#faq,#status,#projects{
-    transform: translate(-100%,0);
-    display: none;
-}
 .device-text{
     font-size:50%;
     font-family:"Ubuntu Mono",monospaced;

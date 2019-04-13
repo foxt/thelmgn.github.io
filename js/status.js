@@ -1,28 +1,3 @@
-function timeToString(time) {
-    var diff = new Date().getTime() - new Date(time).getTime()
-    if (diff < 0) {diff = -diff}
-    var date = new Date(diff)
-    if (date.getTime() > 31536000000) {
-        return (date.getUTCFullYear()-1970).toString() + " yr"
-    }
-    if (date.getTime() > 2629800000) {
-        return date.getUTCMonth().toString() + " mo"
-    }
-    if (date.getTime() > 86400000) {
-        return date.getUTCDate().toString() + " day"
-    }
-    if (date.getTime() > 3600000) {
-        return date.getUTCHours().toString() + " hr"
-    }
-    if (date.getTime() > 60000) {
-        return date.getUTCMinutes().toString() + " min"
-    }
-    if (date.getTime() > 1000) {
-        return date.getUTCSeconds().toString() + " sec"
-    }
-    return date.getTime().toString() + " ms"    
-}
-
 var cbTime = -1
 setInterval(function() {
     cbTime = cbTime - 1
@@ -63,3 +38,4 @@ async function fetchStatus() {
         cbTime = 5
     }
 }
+fetchStatus()
