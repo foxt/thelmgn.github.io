@@ -40,13 +40,8 @@ function generate(check) {
         Down for: <b>${timeToString(check.down_since)}</b><br>Error code: <b>${check.error}</b>`
     }
     return `
-    <a class="regular sociallink ${check.down ? "down" : "up"}" href="//updown.io/${check.token}">
-    <i class="fas fa-thumbs-${check.down ? "down" : "up"} fa-fw"></i> ${check.alias} (${check.down ? "DOWN" : "UP"})<br>
-    <h3 class="device-text">
-    Uptime: <b>${check.uptime}%</b><br>
-    Last checked: <b>${timeToString(check.last_check_at)}</b><br>
-    Next check: <b>${timeToString(check.next_check_at)}</b>${down}
-    </h3>
+    <a class="regular sociallink ${check.statusClass == "success" ? "up" : "down"}" href="//status.thelmgn.com/${check.monitorId}">
+    <i class="fas fa-thumbs-${check.statusClass == "success" ? "up" : "down"} fa-fw"></i> ${check.name} (${check.weeklyRatio.ratio}%)<br>
     </a>`
 }
 var gotStatus = false
@@ -54,11 +49,11 @@ var gotStatus = false
 async function fetchStatus() {
     document.querySelector("#statuscontainer").style.filter = "blur(3px) brightness(50%)"
     try {
-        var statusFetch = await fetch("https://updown.io/api/checks?api-key=ro-XWMrTMDi6HzxBvYAaStE")
+        var statusFetch = await fetch("https://cors-anywhere.herokuapp.com/https://status.thelmgn.com/api/getMonitorList/jZl0ksrZq")
         var status = await statusFetch.json()
-        var string = `<h3 class="device-text mono italic" id="statusUpdate">Next update: 60 seconds</h3>`
-        for (var check of status) {
-            string = string + generate(check)
+        var string = `<h3 class="device-text mono italic">Last downtime: ${status.statistics.latest_downtime}</h3><h3 class="device-text mono italic" id="statusUpdate">Next update: 60 seconds</h3>`
+        for (var check of status.psp.monitors) {
+            string += generate(check)
         }
         document.querySelector("#statuscontainer").innerHTML = string
         document.querySelector("#statuscontainer").style.filter = ""
