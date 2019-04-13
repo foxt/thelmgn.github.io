@@ -12,6 +12,7 @@
 }
 body{
     background:#222;
+    transition: 0.25s opacity;
 }
 .mono{
     color:#fff;

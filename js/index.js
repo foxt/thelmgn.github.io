@@ -32,6 +32,13 @@ function projects() {
     fetchProjects()
   } 
 }
+function words() {
+  document.body.style.opacity = "0"
+  setTimeout(function() {
+    location.replace("http://words.thelmgn.com")
+  },250)
+}
+
 document.querySelector("#sociallinks").style.maxHeight = "1000vh";
 
 
@@ -39,6 +46,7 @@ document.querySelector("#devicesBtn").style.display = ""
 document.querySelector("#statusBtn").style.display = ""
 document.querySelector("#projectsBtn").style.display = ""
 document.querySelector("#faqBtn").style.display = ""
+document.querySelector("#wordsBtn").href = "javascript:words()"
 
 try {
   if (document.querySelector(location.hash)) {
