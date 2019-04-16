@@ -15,7 +15,8 @@ try {
   loadPage("status")
   requiresJS = ["status","projects"]
 
-  function switchPage(to) {
+  function switchPageActual(to) {
+    try {clearInterval(statusInterval)}catch(e){}
     document.querySelector("#replacableContent").style.transform = "translate(-100%,0%)";
     window.scroll({
       top: 0, 
@@ -32,8 +33,18 @@ try {
         await loadScript(`js/${to}.js`)
       }
       document.querySelector("#replacableContent").style.transform = "translate(0%,0%)";
-      history.pushState({}, "theLMGN v17.2", to + ".html");
     },750)
+  }
+
+  window.onpopstate = function(event) {
+    console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+    var to = document.location.pathname.replace("/","").split(".")[0]
+    switchPageActual(to)
+  };
+
+  function switchPage(to) {
+    history.pushState({}, "theLMGN v17.2 - " + to, to + ".html");
+    switchPageActual(to)
   }
 
 
@@ -53,7 +64,7 @@ try {
   }
   function updateLinks() {
     for (var e of document.querySelectorAll(".jsBtn")) {
-      e.href = `#`
+      e.href = `javascript:;`
       registerClickThing(e)
     }
   }
