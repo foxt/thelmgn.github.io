@@ -120,7 +120,7 @@ h1{
     bottom: 0;
     text-align: right;
 }
-#devices,#sociallinks,#faq,#status,#projects{
+#content,#replacableContent {
     overflow:hidden;
     transform: translate(0%,0);
     transition:1s all;

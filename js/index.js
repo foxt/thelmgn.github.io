@@ -4,39 +4,39 @@ try {
 
   function timeToString(time){var diff=new Date().getTime()-new Date(time).getTime();if(diff<0){diff= -diff}var date=new Date(diff);if(date.getTime()>31536000000){return(date.getUTCFullYear()-1970).toString()+" yr"}if(date.getTime()>2629800000){return date.getUTCMonth().toString()+" mo"}if(date.getTime()>86400000){return date.getUTCDate().toString()+" day"}if(date.getTime()>3600000){return date.getUTCHours().toString()+" hr"}if(date.getTime()>60000){return date.getUTCMinutes().toString()+" min"}if(date.getTime()>1000){return date.getUTCSeconds().toString()+" sec"}return date.getTime().toString()+" ms"}
 
+  console.log("Loading pages...")
+  async function loadPage(page) {
+    window[page] = await (await fetch(`${page}.html`)).text()
+  }
+  loadPage("index")
+  loadPage("faq")
+  loadPage("devices")
+  loadPage("projects")
+  loadPage("status")
+  requiresJS = ["status","projects"]
 
-  function switchPane(from,to) {
-    document.querySelector(from).style.transform = "translate(-100%,0%)";
+  function switchPage(to) {
+    document.querySelector("#replacableContent").style.transform = "translate(-100%,0%)";
     window.scroll({
       top: 0, 
       left: 0, 
       behavior: 'smooth',
     });
     scrollIt(0,500,'easeOutQuad');
-    setTimeout(function() {
-      document.querySelector(from).style.display = "none"
-      document.querySelector(to).style.display = "block"
-      setTimeout(function() {
-        document.querySelector(to).style.transform = "translate(0%,0%)";
-      },15)
+    setTimeout(async function() {
+      var el = document.createElement( 'html' );
+      el.innerHTML = window[to]
+      document.querySelector("#replacableContent").innerHTML = el.querySelector("#replacableContent").innerHTML
+      updateLinks()
+      if (requiresJS.includes(to)) {
+        await loadScript(`js/${to}.js`)
+      }
+      document.querySelector("#replacableContent").style.transform = "translate(0%,0%)";
+      history.pushState({}, "theLMGN v17.2", to + ".html");
     },750)
-    location.hash = to
   }
 
 
-  function status() {
-    switchPane("#sociallinks","#status")
-    if (!gotStatus) {
-      fetchStatus()
-    } 
-  }
-
-  function projects() {
-    switchPane("#sociallinks","#projects")
-    if (!gotProjects) {
-      fetchProjects()
-    } 
-  }
   function words(e) {
     e.preventDefault()
     document.body.style.opacity = "0"
@@ -46,23 +46,19 @@ try {
     return false;
   }
 
-  document.querySelector("#devicesBtn").href = "javascript:devices()"
-  document.querySelector("#statusBtn").href = "javascript:status()"
-  document.querySelector("#projectsBtn").href = "javascript:projects()"
-  document.querySelector("#faqBtn").href = "javascript:faq()"
-  document.querySelector("#wordsBtn").onmousedown = words
-
-  try {
-    if (document.querySelector(location.hash)) {
-      switchPane("#sociallinks",location.hash)
-      if (location.hash = "#status") {
-        fetchStatus()
-      }
-      if (location.hash = "#projects") {
-        fetchProjects()
-      }
+  function registerClickThing(el) {
+    el.onclick = function(e) {
+      eval(el.dataset.js)
     }
-  } catch(e){}
+  }
+  function updateLinks() {
+    for (var e of document.querySelectorAll(".jsBtn")) {
+      e.href = `#`
+      registerClickThing(e)
+    }
+  }
+  updateLinks()
+
 } catch(e){console.error(e)}
 
 

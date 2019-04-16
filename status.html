@@ -27,29 +27,30 @@
         <div id="content">
             <h1 class="gsans">theLMGN</h1>
             <h3 class="mono italic">"lazy programmer"</h3>
-        <div id="content">
-            <div id="statuscontainer">
-                <span class="regular sociallink">
-                    <i class="fas fa-sync fa-spin fa-fw"></i> LOADING
-                    <h3 class="device-text">Make sure JavaScript is enabled!</h3>
-                </span>
+            <div id="replacableContent">
+                <div id="statuscontainer">
+                    <h3 class="device-text mono italic"></h3><h3 class="device-text mono italic" id="statusUpdate"></h3>
+                    <span class="regular sociallink">
+                        <i class="fas fa-sync fa-spin fa-fw"></i> LOADING
+                        <h3 class="device-text">Make sure JavaScript is enabled!</h3>
+                    </span>
+                </div>
+                <a href="index.html" class="regular sociallink jsBtn" data-js="switchPage('index')" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
             </div>
-            <a href="index.html" class="regular sociallink" id="back"><i class="fas fa-arrow-left fa-fw"></i> GO BACK</a>
+            
+            <sub id="credits" class="mono"><a href="https://github.com/thelmgn/thelmgn.github.io">This site is hosted on GitHub Pages</a><br>(c) theLMGN 2018-19, thanks to <a href="https://dnomaid.co.uk">Tom</a> for help and ideas, <a href="https://spriteclad.com">Spriteclad</a> for making the site better on mobile devices.</sub>
         </div>
         
-        <sub id="credits" class="mono"><a href="https://github.com/thelmgn/thelmgn.github.io">This site is hosted on GitHub Pages</a><br>(c) theLMGN 2018-19, thanks to <a href="https://dnomaid.co.uk">Tom</a> for help and ideas, <a href="https://spriteclad.com">Spriteclad</a> for making the site better on mobile devices.</sub>
-    </div>
-    
-    
-    <script src="js/status.js"></script>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/jameskii.css">
-    <div id="jameskii">
-        <div id="jameskiitop">
-            thanks for watching!
+        <script src="js/status.js"></script>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/jameskii.css">
+        <div id="jameskii">
+            <div id="jameskiitop">
+                thanks for watching!
+            </div>
+            <div id="jameskiibottom">LIKE AND SUBSCRIBE</div>
+            <audio src="clippy/jameskii.opus" id="jameskiiAudio" preload="auto"></audio>
         </div>
-        <div id="jameskiibottom">LIKE AND SUBSCRIBE</div>
-        <audio src="clippy/jameskii.opus" id="jameskiiAudio" preload="auto"></audio>
-    </div>
-</body>
-</html>
+    </body>
+    
+    </html>

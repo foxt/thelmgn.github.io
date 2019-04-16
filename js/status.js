@@ -1,5 +1,5 @@
 var cbTime = -1
-setInterval(function() {
+window.statusInterval = setInterval(function() {
     cbTime = cbTime - 1
     document.querySelector("#statusUpdate").innerText = `Next update: ${cbTime} second${cbTime == 0 ? "" : "s"}`
     if (cbTime == 0) {
