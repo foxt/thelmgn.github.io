@@ -120,14 +120,10 @@ h1{
     bottom: 0;
     text-align: right;
 }
-#devices,#sociallinks,#faq,#status,#projects{
+#content,#replacableContent {
     overflow:hidden;
     transform: translate(0%,0);
     transition:1s all;
-}
-#devices,#faq,#status,#projects{
-    transform: translate(-100%,0);
-    display: none;
 }
 .device-text{
     font-size:50%;
