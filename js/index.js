@@ -7,13 +7,22 @@ try {
   console.log("Loading pages...")
   async function loadPage(page) {
     window[page] = await (await fetch(`${page}.html`)).text()
+    var el = document.querySelector(`#${page}Btn`)
+    el.onclick = function(e) {
+      switchPage(page)
+    }
+    el.href = `javascript:;`
   }
-  loadPage("index")
-  loadPage("faq")
-  loadPage("devices")
-  loadPage("projects")
-  loadPage("status")
-  requiresJS = ["status","projects"]
+  function loadPages() {
+    loadPage("index")
+    loadPage("faq")
+    loadPage("devices")
+    loadPage("projects")
+    loadPage("status")
+    requiresJS = ["status","projects"]
+  }
+  loadPages()
+  
 
   function switchPageActual(to) {
     try {clearInterval(statusInterval)}catch(e){}
@@ -28,7 +37,7 @@ try {
       var el = document.createElement( 'html' );
       el.innerHTML = window[to]
       document.querySelector("#replacableContent").innerHTML = el.querySelector("#replacableContent").innerHTML
-      updateLinks()
+      loadPages()
       if (requiresJS.includes(to)) {
         await loadScript(`js/${to}.js`)
       }
@@ -43,6 +52,7 @@ try {
   };
 
   function switchPage(to) {
+    document.title = "theLMGN v17.2 - " + to
     history.pushState({}, "theLMGN v17.2 - " + to, to + ".html");
     switchPageActual(to)
   }
