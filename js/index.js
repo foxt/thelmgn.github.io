@@ -54,8 +54,10 @@ try {
   };
 
   function switchPage(to) {
-    document.title = "theLMGN v17.2 - " + to
-    history.pushState({}, "theLMGN v17.2 - " + to, to + ".html");
+    var toFriendly = " - " + to
+    if (to == "index") {to = ""}
+    document.title = "theLMGN v17.2" + toFriendly
+    history.pushState({}, "theLMGN v17.2" + toFriendly, to + ".html");
     switchPageActual(to)
   }
 
