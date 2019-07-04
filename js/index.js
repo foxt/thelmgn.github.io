@@ -8,10 +8,12 @@ try {
   async function loadPage(page) {
     window[page] = await (await fetch(`${page}.html`)).text()
     var el = document.querySelector(`#${page}Btn`)
-    el.onclick = function(e) {
-      switchPage(page)
-    }
-    el.href = `javascript:;`
+    try {
+      el.onclick = function(e) {
+        switchPage(page)
+      }
+      el.href = `javascript:;`
+    } catch(e) {}
   }
   function loadPages() {
     loadPage("index")
