@@ -55,7 +55,7 @@ try {
 
   function switchPage(to) {
     var toFriendly = " - " + to
-    if (to == "index") {to = ""}
+    if (to == "index") {toFriendly = ""}
     document.title = "theLMGN v17.2" + toFriendly
     history.pushState({}, "theLMGN v17.2" + toFriendly, to + ".html");
     switchPageActual(to)
