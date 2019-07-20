@@ -86,6 +86,14 @@ try {
 
 } catch(e){console.error(e)}
 
+// CAD
+
+window.onkeydown = function(evt) {
+  if (evt.code == "Delete" && evt.altKey && (evt.ctrlKey || evt.metaKey)) {
+    location.reload()
+  }
+}
+
 
 //KONAMI
 
