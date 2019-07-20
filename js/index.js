@@ -90,7 +90,7 @@ try {
 
 window.onkeydown = function(evt) {
   if (evt.code == "Delete" && evt.altKey && (evt.ctrlKey || evt.metaKey)) {
-    location.reload()
+    location.reload(true)
   }
 }
 
