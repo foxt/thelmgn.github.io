@@ -5,6 +5,7 @@
 }
 #mainBg{
     height:75vh;
+    max-width: 100vw;
     position:fixed;
     right:0;
     bottom:0;
