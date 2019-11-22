@@ -4,7 +4,7 @@
     pointer-events:none;
 }
 #mainBg{
-    height:75vh;
+    max-height:75vh;
     max-width: 100vw;
     position:fixed;
     right:0;

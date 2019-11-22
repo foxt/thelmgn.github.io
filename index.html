@@ -25,7 +25,12 @@
 
 <body>
     <div id="container">
-        <img height="75vh" class="faded" src="eee.png" id="mainBg" alt=""></img>
+        <picture height="75vh" class="faded" id="mainBg" alt="">
+            <source srcset="eee.webp" type="image/webp">
+            <source srcset="eee.png" type="image/png">
+            <img src="eee.png" id="logo" alt="">
+        </picture>
+
         <div id="content">
             <h1 class="gsans">theLMGN</h1>
             <h3 class="mono italic">"lazy programmer"</h3>
