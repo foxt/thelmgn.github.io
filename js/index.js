@@ -130,3 +130,16 @@ async function loadClippy() {
   await loadScript("clippy/konami.js")
   new Konami(loadClippy)
 })()
+
+;(async function() {
+  var date = new Date() - 0
+  if (date > 1574643600000 && date < 1577408400000) {
+    await loadScript("https://cdn.jsdelivr.net/npm/magic-snowflakes@4.1.3/dist/snowflakes.min.js")
+    var sf = new Snowflakes({
+      color: "#ffffff",
+      count: 75,
+      minOpacity: 0.2,
+      maxOpacity: 0.6
+    });
+  }
+})()
