@@ -108,6 +108,7 @@ function loadScript(href) {
 }
 var jameski= false
 async function loadClippy() {
+  /*
   if (jameski == false) {
     document.querySelector("#jameskii").style.display = "block"
     await document.querySelector("audio").play()
@@ -122,7 +123,8 @@ async function loadClippy() {
       document.querySelector("#container").style.transition = "240s transform"
       document.querySelector("#container").style.transform = "scale(10) rotate(90deg)"
     },500)
-  }
+  }*/
+  location.replace("http://old.thelmgn.com")
 }
 (async function() {
   await loadScript("clippy/konami.js")
