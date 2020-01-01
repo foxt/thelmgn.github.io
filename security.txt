@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: https://thelmgn.com
+Contact: mailto:com.thelmgn@leo
+Encryption: https://keybase.io/encrypt#thelmgn
+Preferred-Languages: en
+Canonical: https://thelmgn.com/security.txt
+-----BEGIN PGP SIGNATURE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+wsFcBAABCgAGBQJd35hQAAoJEKiChQruryOXv+YP/RRthYrUZFYzlgZHUYNw8BJj
+zOacORcqOHL5hLECk4Z4XabiPwhLyW4x86FlofQAEDlkOSXSvsJxXELF1MsalSUV
+i3TpTOo3bIZvdUCULYHaI/mtLw9ZYqTiYSk1ugULCYxzxuw9i64R3GQ4/S9zceOL
+fuorxXhVQSAR3qv1+EVbO/UGTfdQBo4luYJbnAc10rvwg3TIgEk2YijOhL0aMB4+
+mknDA10yVRNz9MkPStgjRqj3HLSb9JT2T/Tdsz1jd7iHCGqjtj5sf09nNQbuEhAu
+C3qZa8I8Ym2Vm5Bb/EdEckcJ+HIXmw8VIHVF8L1nqZdsJK7o9Uj3Yb4+lRhj57We
+fAs0ft7cIh5ebJNWJIJXsleRUsSskF9hyq2Q5sfeSsytD/2QBVrmnjflPD+mAuLM
+/76egKTXo4c8a0P/BYr900J2TouPcluQRo1I2ZPODEx1S5FtWlgimenJpdPb8m8b
+/efXbYzftltXMUlf6KWADnm/3aWVJ+/ONZOMT2GBJf8u1388tf+VDPNzjlupBiKP
+k7kBypcobYcHdzlmnrl1nxnbawM/ILRLpvyNSlBrKTzF1IcEcyAfpqK1RzXxB2uX
+5JF+448ShDqI/aBPtDBn8T/5Nc2jD/gifGw85W2dPYjmY6o7FVwtQht1FHwfrr1u
+dxddW+t7z9znWpg5iG1W
+=D4CK
+-----END PGP SIGNATURE-----
