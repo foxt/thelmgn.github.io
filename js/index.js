@@ -132,7 +132,7 @@ async function loadClippy() {
 })()
 
 ;(async function() {
-  var date = new Date() - 0
+  var date = new Date()
   if (date.getMonth() == 11) {
     await loadScript("https://cdn.jsdelivr.net/npm/magic-snowflakes@4.1.3/dist/snowflakes.min.js")
     var sf = new Snowflakes({
