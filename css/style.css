@@ -66,12 +66,6 @@ h1{
 #reddit:hover{
     border-left:.15em solid #FF4300;
 }
-#e6{
-    border-left:.1em solid rgba(1, 46, 86,128);
-}
-#e6:hover{
-    border-left:.15em solid rgb(1, 46, 86);
-}
 #twitter{
     border-left:.1em solid #1da1f280;
 }
