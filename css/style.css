@@ -158,3 +158,12 @@ h1{
 a {
     text-decoration: none;
 }
+marquee::after {
+    position:fixed;
+    top:0;
+    left:0;
+    font-size: 32px;
+    background: red;
+    color: #fff;
+    content: "GO AWAY"
+}
