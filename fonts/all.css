@@ -1,4 +1,2 @@
-@import url("./fa/css/brands.min.css");
-@import url("./fa/css/solid.min.css");
-@import url("./fa/css/fa.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
 @font-face {font-family: 'Product Sans';src: url('fonts/product-sans.eot');src: local('Google Sans Regular'),local('Product Sans Regular'), url('fonts/product-sans.woff') format('woff'), url('fonts/product-sans.ttf') format('truetype'), url('fonts/product-sans.svg') format('svg');font-weight: normal;font-style: normal;}@font-face {font-family: 'ProductSansBold';src: url('fonts/GoogleSans-Bold.eot');src: local('Google Sans Bold'),local('Product Sans Bold'), url('fonts/GoogleSans-Bold.woff') format('woff'), url('fonts/GoogleSans-Bold.ttf') format('truetype'), url('fonts/GoogleSans-Bold.svg') format('svg');font-weight: normal;font-style: normal;}
