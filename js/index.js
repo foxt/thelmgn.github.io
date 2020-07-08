@@ -7,8 +7,8 @@ try {
   console.log("Loading pages...")
   async function loadPage(page) {
     window[page] = await (await fetch(`${page}.html`)).text()
-    var el = document.querySelector(`#${page}Btn`)
     try {
+      var el = document.querySelector(`#${page}Btn`)
       el.onclick = function(e) {
         switchPage(page)
       }
@@ -21,6 +21,7 @@ try {
     loadPage("devices")
     loadPage("projects")
     loadPage("status")
+    loadPage("donate")
     requiresJS = ["status","projects"]
   }
   loadPages()

@@ -167,3 +167,30 @@ marquee::after {
     color: #fff;
     content: "GO AWAY"
 }
+
+#paypal{
+    border-left:.1em solid #0070ba80;
+}
+#paypal:hover{
+    border-left:.15em solid #0070ba;
+}
+#cashapp{
+    border-left:.1em solid #00D04980;
+}
+#cashapp:hover{
+    border-left:.15em solid #00D049;
+}
+
+#patreon{
+    border-left:.1em solid #FB665680;
+}
+#patreon:hover{
+    border-left:.15em solid #FB6656;
+}
+
+#crypto{
+    border-left:.1em solid #EC8C19;
+}
+#crypto:hover{
+    border-left:.15em solid #EC8C19;
+}
