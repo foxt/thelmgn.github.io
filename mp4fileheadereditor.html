@@ -1,0 +1,87 @@
+<h1>MP4 File Length Editor (beta)</h1>
+<h2>by <a href="https://thelmgn.com">theLMGN</a>
+  <h3>Instructions</h3>
+  - Upload an MP4 file.<br>
+  - Set a video length in milliseconds (1 second = 1000ms)<br>
+  - Click "Rewrite file header"
+<h3>Upload an mp4</h3>
+<input id="uploadInput" type="file" name="myFiles" multiple><br>
+<h3>Video Length (millis)</h3>
+<input type="number" max="2147483647" min="-2147483648" value="0"></input><br>
+<b id="actualtime"></b><br>
+<br>
+<button>Rewrite file header</button><br>
+<a href="#" id="download" style="display:none;">Download</a><br>
+<script>
+    const mvhd = 1836476516
+
+function millisToMinutesAndSeconds(millis) {
+  var neg = false;
+  if (millis < 0) { millis = -millis; neg = true}
+  var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000).toFixed(0);
+  return (neg ? "-" : "") + minutes + "m" + (seconds < 10 ? '0' : '') + seconds + "s";
+}
+
+function updatetime() {
+  try {
+     var val = document.querySelector("input[type=number]").value
+     if (val < -2147483648) {document.querySelector("input[type=number]").value = -2147483648}
+     if (val > 2147483647) {document.querySelector("input[type=number]").value = 2147483647}
+     document.querySelector("#actualtime").innerText = millisToMinutesAndSeconds(val)
+  }catch(e){}
+  requestAnimationFrame(updatetime)  
+}
+requestAnimationFrame(updatetime)
+
+// probably a more efficient way to do this
+function getAddress(dv,start,value) {
+  try {
+    for (var i = 0; i < dv.byteLength; i++) {
+      if (dv.getInt32(i, false) == value) { return i}
+    }
+    return -1
+  } catch(e) {
+    alert(e)
+    return -2
+  }
+}
+
+function update() {
+  try {
+    var file = this.files[0]
+    const reader = new FileReader();
+    reader.onerror = function(e) {
+      alert(e)
+    }
+    reader.onload = function(e) {
+     var result = reader.result;
+     var dv = new DataView(result)
+     var mvhdAddr = 0
+     console.log(result,dv)
+     var mvhdAddr = getAddress(dv,0,mvhd)
+     console.log("Found mvhd address at",mvhdAddr)
+     if (mvhdAddr < 0) {
+       return alert("File isn't valid MP4, or an error happened.")
+     }
+     var length = dv.getInt32(mvhdAddr + 20, false)
+     console.log("File is",length,"ms long")
+     document.querySelector("input[type=number]").value = length
+     document.querySelector("button").onclick = function() {
+       console.log("writing file length")
+       dv.setInt32(mvhdAddr + 20,document.querySelector("input[type=number]").value, false)
+       var url = URL.createObjectURL(new Blob([dv.buffer], {type: "video/mp4"}))
+       console.log(url)
+       document.querySelector("#download").href = url
+       document.querySelector("#download").download = file.name
+       document.querySelector("#download").click()
+       //document.querySelector("video").src = url
+     }
+    };
+    reader.readAsArrayBuffer(file);
+  } catch(e) {
+    alert(e)
+  }
+}
+document.getElementById("uploadInput").addEventListener("change", update, false);
+</script>
