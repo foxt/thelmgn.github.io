@@ -1,5 +1,5 @@
 # the site for the lazy programmer
-## (c) 2018-2020 Leo Nesfield (theLMGN)
+## (c) 2018-2021 theLMGN
 
 ![Designed in MS Paint](https://forthebadge.com/images/badges/designed-in-ms-paint.svg)![Powered by electricity](https://forthebadge.com/images/badges/powered-by-electricity.svg)![:worksonmymachine:](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg) 
 

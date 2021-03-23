@@ -2,7 +2,7 @@
 Hash: SHA512
 
 Contact: https://thelmgn.com
-Contact: mailto:com.thelmgn@leo
+Contact: mailto:com.thelmgn@me
 Encryption: https://keybase.io/encrypt#thelmgn
 Preferred-Languages: en
 Canonical: https://thelmgn.com/security.txt
