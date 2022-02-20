@@ -125,7 +125,7 @@ async function loadClippy() {
       document.querySelector("#container").style.transform = "scale(10) rotate(90deg)"
     },500)
   }*/
-  location.replace("http://old.thelmgn.com")
+  location.replace("https://youtu.be/3N4yIDfN-M8")
 }
 (async function() {
   await loadScript("clippy/konami.js")
